@@ -8,22 +8,23 @@ export default {
     settings: {
         enabled: true,
         onlyOwner: false,
-        perm: "",
+        perm: [],
         aliases: [],
     },
-    run: async (client, message, args) => {
-        message.channel.send("Hesaplanıyor...").then((m) => {
-            m.edit({
-                embeds: [
+    run: async (client, message) => {
+        message.channel
+            .embed(client.embeds.info("Hesaplanıyor..."))
+            .then((m) => {
+                let botLatency = m.createdTimestamp - message.createdTimestamp;
+                let apiLatency = Math.round(client.ws.ping);
+
+                m.editEmbed(
                     client.embeds.info(
-                        `**Mesaj Gecikmesi:** \`${
-                            m.createdTimestamp - message.createdTimestamp
-                        }ms\`
+                        `**Bot Gecikmesi:** \`${botLatency}ms\`
                         
-                        **API Gecikmesi:** \`${Math.round(client.ws.ping)}ms\``
-                    ),
-                ],
+                        **Discord API Gecikmesi:** \`${apiLatency}ms\``
+                    )
+                );
             });
-        });
     },
 };
