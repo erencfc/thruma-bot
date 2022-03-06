@@ -33,7 +33,7 @@ readdirSync("./src/commands/").forEach(async (category) => {
         const log = `${chalk.green("[COMMAND]")} ${chalk.yellow(commandName)}`;
         const errLog = `${chalk.red("[COMMAND]")} ${chalk.yellow(commandName)}`;
 
-        if (!command.run) return console.log(errLog);
+        if (!command?.run) return console.log(errLog);
         console.log(log);
 
         client.commands.set(commandName, command);
