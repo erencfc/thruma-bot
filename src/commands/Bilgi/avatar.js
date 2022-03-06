@@ -16,9 +16,7 @@ export default {
         const member = await client.member.getMemberById(args[0], message);
 
         if (!member) {
-            return message.channel.embed(
-                client.embeds.error(`**Böyle bir kullanıcı yok!**`)
-            );
+            return client.noMember(message);
         }
 
         const avatar = member.displayAvatarURL({ size: 2048, dynamic: true });
