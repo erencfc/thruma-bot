@@ -72,9 +72,9 @@ export default (client) => {
 
             resolve(true);
         })
-            .then(() => {
+            .then(async () => {
                 try {
-                    cmd.run(client, message, args);
+                    await cmd.run(client, message, args);
                 } catch (err) {
                     message.channel.send(
                         "Bu komutta bilinmeyen bir hata oluştu."
