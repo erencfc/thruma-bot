@@ -74,7 +74,7 @@ export default (client) => {
         })
             .then(async () => {
                 try {
-                    await cmd.run(client, message, args);
+                    await cmd.run(client, message, args, bot);
                 } catch (err) {
                     message.channel.send(
                         "Bu komutta bilinmeyen bir hata oluştu."

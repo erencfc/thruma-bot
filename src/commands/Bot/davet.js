@@ -3,6 +3,7 @@ export default {
         name: "davet",
         description: "Botun davet linkini gönderir.",
         usage: "davet",
+        category: "Bot",
     },
     settings: {
         enabled: true,

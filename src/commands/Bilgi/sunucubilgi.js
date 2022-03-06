@@ -3,6 +3,7 @@ export default {
         name: "sunucubilgi",
         description: "Sunucunun bilgilerini gösterir.",
         usage: "sunucubilgi",
+        category: "Bilgi",
     },
     settings: {
         enabled: true,
@@ -12,8 +13,6 @@ export default {
     },
     run: async (client, message, args) => {
         await message.guild.members.fetch();
-        await message.guild.channels.fetch();
-        await message.guild.roles.fetch();
         let owner = (
             await client.member.getMemberById(message.guild.ownerId, message)
         ).user.tag;

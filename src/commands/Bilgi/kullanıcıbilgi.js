@@ -3,6 +3,7 @@ export default {
         name: "kullanıcıbilgi",
         description: "Kullanıcının bilgilerini gösterir.",
         usage: "kullanıcıbilgi [kullanıcı]",
+        category: "Bilgi",
     },
     settings: {
         enabled: true,

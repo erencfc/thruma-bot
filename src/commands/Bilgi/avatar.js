@@ -5,6 +5,7 @@ export default {
         name: "avatar",
         description: "Kullanıcının avatarını gösterir.",
         usage: "avatar [kullanıcı]",
+        category: "Bilgi",
     },
     settings: {
         enabled: true,

@@ -12,6 +12,7 @@ export default {
         name: "botinfo",
         description: "Botun bilgilerini gösterir.",
         usage: "botinfo",
+        category: "Bot",
     },
     settings: {
         enabled: true,
