@@ -15,10 +15,10 @@ client.categories = readdirSync("./src/commands/");
     (await import(`./handlers/util.js`)).default(client);
     (await import(`./handlers/event.js`)).default(client);
     (await import(`./handlers/command.js`)).default(client);
+
+    await mongoose
+        .connect(process.env.MONGO_URI)
+        .then(() => console.log("MongoDB Connected."));
+
+    client.login(process.env.TOKEN);
 })();
-
-await mongoose
-    .connect(process.env.MONGO_URI)
-    .then(() => console.log("MongoDB Connected."));
-
-client.login(process.env.TOKEN);
