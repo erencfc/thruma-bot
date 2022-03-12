@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "run": "node ./src/index.js",
-        "dev": "nodemon ./src/index.js",
+        "dev": "nodemon ./src/index.js --ignore ./src/config",
         "server": "pm2 start ./src/index.js --name thruma"
     },
     "license": "MIT",
