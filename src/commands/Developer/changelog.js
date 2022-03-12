@@ -80,9 +80,10 @@ export default {
                         );
                     });
 
-                return client.success(
-                    message,
-                    "Sürümü ve değişiklikleri güncelledim!"
+                return message.channel.embed(
+                    client.embeds.success(
+                        `**Sürümü ve değişiklikleri güncelledim!**`
+                    )
                 );
             });
         });
