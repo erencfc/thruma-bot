@@ -66,7 +66,7 @@ export default {
                 },
                 {
                     name: "Roller",
-                    value: roles,
+                    value: roles ? roles : "Yok",
                 }
             )
             .setFooter({ text: `ID: ${member.id}` });
