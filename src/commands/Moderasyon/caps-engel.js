@@ -3,7 +3,7 @@ export default {
         name: "caps-engel",
         description: "Büyük harf engelleme sistemini ayarlar.",
         usage: "caps-engel <aç/kapat>",
-        category: "Yetkili",
+        category: "Moderasyon",
     },
     settings: {
         enabled: true,
